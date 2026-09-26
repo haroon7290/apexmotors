@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Details | Apex Prime Motors</title>
+  <meta name="description" content="View full details, photos and specification for this vehicle at Apex Prime Motors, Slough.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='%23c9a24a'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Apex Prime Motors home">
+      <span class="logo-mark">A</span>
+      <span class="logo-text">Apex Prime <em>Motors</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="inventory.html" class="active">Inventory</a>
+      <a href="index.html#part-exchange">Part Exchange</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:07517146120" class="btn btn-gold btn-sm nav-cta">Call 07517 146120</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:2.5rem">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb" style="color:var(--grey-600);margin-bottom:1.75rem">
+        <a href="index.html">Home</a><span>/</span><a href="inventory.html">Inventory</a><span>/</span><span id="crumbVehicle">Vehicle</span>
+      </nav>
+      <div id="vehiclePage"></div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-head row">
+        <div>
+          <span class="eyebrow">You may also like</span>
+          <h2>Similar vehicles</h2>
+        </div>
+        <a href="inventory.html" class="btn btn-outline-dark">View all stock</a>
+      </div>
+      <div class="vehicle-grid" id="similarVehicles"></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <h2>Want to see it in person?</h2>
+        <p>We're open 7 days a week, 9am - 7pm. Call ahead and we'll have it ready for you.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:07517146120" class="btn btn-dark">Call 07517 146120</a>
+        <a href="contact.html" class="btn btn-outline-dark">Get directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><span class="logo-mark">A</span><span class="logo-text">Apex Prime <em>Motors</em></span></a>
+      <p>Quality used cars in Slough, Berkshire. HPI checked, warranty included and part exchange welcome on every vehicle.</p>
+      <a href="tel:07517146120" class="btn btn-gold btn-sm">07517 146120</a>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="index.html#part-exchange">Part exchange</a></li>
+        <li><a href="index.html#about">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Opening hours</h4>
+      <ul>
+        <li class="hours-row"><span>Monday - Friday</span><strong>9am - 7pm</strong></li>
+        <li class="hours-row"><span>Saturday</span><strong>9am - 7pm</strong></li>
+        <li class="hours-row"><span>Sunday</span><strong>9am - 7pm</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <ul>
+        <li>Apex Prime Motors Ltd</li>
+        <li>04 Aldborough Spur</li>
+        <li>Slough, SL1 3EN</li>
+        <li><a href="mailto:sales@apexprimemotors.co.uk">sales@apexprimemotors.co.uk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Apex Prime Motors Ltd. All rights reserved.</span>
+      <span>Registered in England &amp; Wales.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/vehicle.js"></script>
+</body>
+</html>

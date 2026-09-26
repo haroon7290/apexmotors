@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Used Cars for Sale in Slough | Inventory | Apex Prime Motors</title>
+  <meta name="description" content="Browse our current stock of quality used cars in Slough. Filter by make, body type, fuel and price. All vehicles HPI checked with warranty included.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='%23c9a24a'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Apex Prime Motors home">
+      <span class="logo-mark">A</span>
+      <span class="logo-text">Apex Prime <em>Motors</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="inventory.html" class="active">Inventory</a>
+      <a href="index.html#part-exchange">Part Exchange</a>
+      <a href="index.html#about">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="tel:07517146120" class="btn btn-gold btn-sm nav-cta">Call 07517 146120</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=2000&q=80')">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Inventory</span></nav>
+      <h1>Our current stock</h1>
+      <p>Every vehicle is HPI checked, inspected and comes with a warranty. Can't see what you're looking for? Call us on <a href="tel:07517146120" style="color:var(--gold)">07517 146120</a> and we'll source it.</p>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <button type="button" class="btn btn-dark filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filters">Show filters</button>
+      <div class="inventory-layout">
+        <aside class="filters" id="filters">
+          <form id="filtersForm" style="display:contents">
+            <div class="filters-head">
+              <h3>Filter vehicles</h3>
+              <button type="button" class="link-btn" id="resetFilters">Reset</button>
+            </div>
+            <div class="field">
+              <label for="fKeyword">Search</label>
+              <input id="fKeyword" name="keyword" type="search" placeholder="e.g. BMW, M Sport, hybrid">
+            </div>
+            <div class="field">
+              <label for="fMake">Make</label>
+              <select id="fMake" name="make"><option value="">Any make</option></select>
+            </div>
+            <div class="field">
+              <label for="fBody">Body type</label>
+              <select id="fBody" name="body"><option value="">Any body type</option></select>
+            </div>
+            <div class="field">
+              <label for="fFuel">Fuel type</label>
+              <select id="fFuel" name="fuel"><option value="">Any fuel</option></select>
+            </div>
+            <div class="field">
+              <label for="fTrans">Transmission</label>
+              <select id="fTrans" name="transmission"><option value="">Any transmission</option></select>
+            </div>
+            <div class="field">
+              <label for="fMin">Min price</label>
+              <select id="fMin" name="minPrice">
+                <option value="">No minimum</option>
+                <option value="10000">£10,000</option>
+                <option value="15000">£15,000</option>
+                <option value="20000">£20,000</option>
+                <option value="25000">£25,000</option>
+                <option value="30000">£30,000</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fMax">Max price</label>
+              <select id="fMax" name="maxPrice">
+                <option value="">No maximum</option>
+                <option value="15000">£15,000</option>
+                <option value="20000">£20,000</option>
+                <option value="25000">£25,000</option>
+                <option value="30000">£30,000</option>
+                <option value="40000">£40,000</option>
+                <option value="50000">£50,000</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block">Apply filters</button>
+          </form>
+        </aside>
+
+        <div>
+          <div class="results-bar">
+            <p id="resultsCount">Loading vehicles...</p>
+            <div class="sort-field">
+              <label for="sortBy">Sort by</label>
+              <select id="sortBy">
+                <option value="recommended">Recommended</option>
+                <option value="price-asc">Price: low to high</option>
+                <option value="price-desc">Price: high to low</option>
+                <option value="mileage-asc">Mileage: low to high</option>
+                <option value="year-desc">Newest first</option>
+              </select>
+            </div>
+          </div>
+          <div class="vehicle-grid inventory-grid" id="inventoryGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <h2>Looking for something specific?</h2>
+        <p>Tell us what you need and we'll source it for you at a competitive price.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html?subject=sourcing" class="btn btn-dark">Request a vehicle</a>
+        <a href="tel:07517146120" class="btn btn-outline-dark">Call 07517 146120</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><span class="logo-mark">A</span><span class="logo-text">Apex Prime <em>Motors</em></span></a>
+      <p>Quality used cars in Slough, Berkshire. HPI checked, warranty included and part exchange welcome on every vehicle.</p>
+      <a href="tel:07517146120" class="btn btn-gold btn-sm">07517 146120</a>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="index.html#part-exchange">Part exchange</a></li>
+        <li><a href="index.html#about">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Opening hours</h4>
+      <ul>
+        <li class="hours-row"><span>Monday - Friday</span><strong>9am - 7pm</strong></li>
+        <li class="hours-row"><span>Saturday</span><strong>9am - 7pm</strong></li>
+        <li class="hours-row"><span>Sunday</span><strong>9am - 7pm</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <ul>
+        <li>Apex Prime Motors Ltd</li>
+        <li>04 Aldborough Spur</li>
+        <li>Slough, SL1 3EN</li>
+        <li><a href="mailto:sales@apexprimemotors.co.uk">sales@apexprimemotors.co.uk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Apex Prime Motors Ltd. All rights reserved.</span>
+      <span>Registered in England &amp; Wales.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/inventory.js"></script>
+</body>
+</html>
